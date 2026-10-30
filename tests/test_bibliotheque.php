@@ -61,4 +61,7 @@ verifier(count($res4) === 2, 'rechercher("algo") trouve 2 livres');
 
 // Test : statistiques du catalogue
 $stats = $bib->getStatistiques();
+
+verifier(isset($stats['total_livres']) && $stats['total_livres'] === 4, 'getStatistiques() retourne le bon nombre total de livres');
 verifier($stats['total_livres'] === 4, 'getStatistiques() retourne le bon nombre total de livres');
+
