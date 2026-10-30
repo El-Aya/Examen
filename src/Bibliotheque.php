@@ -68,4 +68,15 @@ class Bibliotheque
         }
         return $resultats;
     }
+    /**
+     * Retourne des statistiques sur le catalogue de la bibliotheque.
+     * @return array
+     */
+    public function getStatistiques(): array
+    {
+        return [
+            'total_livres' => $this->compter(),
+            // Vous pouvez ajouter d'autres indicateurs si besoin
+        ];
+    }
 }
