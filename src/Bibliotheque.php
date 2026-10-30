@@ -74,7 +74,7 @@ class Bibliotheque
      */
     public function getStatistiques() {
     return [
-        'total_livres' => count($this->livres) + 1, // Régression volontaire (+1)
+        'total_livres' => count($this->livres), // Régression volontaire (+1)
         // ...
     ];
 }
