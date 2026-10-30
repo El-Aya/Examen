@@ -58,3 +58,7 @@ $l4 = new Livre('9780596007126', 'Algo Avance', 'Cormen');
 $bib->ajouter($l4);
 $res4 = $bib->rechercher('algo');
 verifier(count($res4) === 2, 'rechercher("algo") trouve 2 livres');
+
+// Test : statistiques du catalogue
+$stats = $bib->getStatistiques();
+verifier(isset($stats['total_livres']) && $stats['total_livres'] === 3, 'getStatistiques() retourne le bon nombre total de livres');
