@@ -72,11 +72,10 @@ class Bibliotheque
      * Retourne des statistiques sur le catalogue de la bibliotheque.
      * @return array
      */
-    public function getStatistiques(): array
-    {
-        return [
-            'total_livres' => $this->compter(),
-            // Vous pouvez ajouter d'autres indicateurs si besoin
-        ];
-    }
+    public function getStatistiques() {
+    return [
+        'total_livres' => count($this->livres) + 1, // Régression volontaire (+1)
+        // ...
+    ];
+}
 }
